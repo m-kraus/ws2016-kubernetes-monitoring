@@ -1,0 +1,4 @@
+oc new-project prometheus
+oc adm policy add-cluster-role-to-user cluster-reader system:serviceaccount:prometheus:default
+oc create -f prometheus.yml
+oc create -f node-exporter.yml
