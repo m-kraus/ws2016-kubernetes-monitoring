@@ -16,7 +16,7 @@
 #  selector:
 #    app: node-exporter
 #  type: ClusterIP
----
+#---
 apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
@@ -52,10 +52,10 @@ spec:
             readOnly: true
         ports:
         - containerPort: 9100
-#          hostPort: 9100
+          hostPort: 9100
           name: scrape
       hostNetwork: true
-#      hostPID: true
+      hostPID: true
       volumes:
         - name: host-proc
           hostPath:
