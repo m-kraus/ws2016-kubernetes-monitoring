@@ -265,7 +265,6 @@ spec:
         ports:
         - name: http
           containerPort: 9090
-#        resources: {}
         volumeMounts:
         - mountPath: /etc/prometheus
           name: prometheus-volume-config
@@ -279,9 +278,6 @@ spec:
           httpGet:
             port: http
           initialDelaySeconds: 1
-#      restartPolicy: Always
-#      securityContext:
-#        privileged: true
       volumes:
       - name: prometheus-volume-config
         configMap:
@@ -309,3 +305,17 @@ spec:
     app: prometheus
     deploymentconfig: prometheus-dc
 #  sessionAffinity: None
+---
+apiVersion: v1
+kind: Route
+metadata:
+  labels:
+    app: prometheus
+  name: prometheus
+spec:
+  host: prometheus.paas.osp.consol.de
+  port:
+    targetPort: 9090-tcp
+  to:
+    kind: Service
+    name: prometheus
