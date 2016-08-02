@@ -1,12 +1,8 @@
-oc new-project prometheus
+oc adm manage-node MYNODE --schedulable=trueoc new-project prometheus
+
+oc patch project prometheus -p '{"metadata":{"annotations":{"openshift.io/node-selector":""}}}'
 oc adm policy add-cluster-role-to-user cluster-reader system:serviceaccount:prometheus:default
 oc create -f prometheus.yml
 
 oc adm policy add-scc-to-user privileged system:serviceaccount:prometheus:default
-oc adm manage-node MYNODE --schedulable=true
 oc create -f node-exporter.yml
-
-OFFEN: project selector
-oc edit namespace prometheus
-openshift.io/node-selector: ""
-oder nodeSelector
