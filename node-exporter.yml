@@ -6,16 +6,15 @@ metadata:
 spec:
   template:
     metadata:
-      # Do not scrape the node-exporter as a pod also
+      # Do not scrape the node-exporter as a pod
       #annotations:
       #  prometheus.io/scrape: 'true'
       labels:
         app: node-exporter
       name: node-exporter
     spec:
-      nodeSelector: {}
       containers:
-      - image: prom/node-exporter
+      - image: prom/node-exporter:0.12.0
         name: node-exporter
         args:
         - -collector.procfs
