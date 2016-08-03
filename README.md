@@ -3,7 +3,7 @@
 Make sure, all your nodes are schedulable, as the node-exporter will not be created on a non-schedulable nodes.
 i
 ```
-oc adm manage-node NODE --schedulable=trueoc new-project prometheus
+oc adm manage-node NODE --schedulable=true
 ```
 
 Make sure, your nodes are reachable via IPV4 and IPV6, check the firewall rules. As a reference attached is a small ansible task:
