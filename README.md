@@ -1,7 +1,9 @@
 # Prerequisites
 
+You have to have cluster-admin privileges on yout Openshift Cluster to execute some of the following commands.
+
 Make sure, all your nodes are schedulable, as the node-exporter will not be created on a non-schedulable nodes.
-i
+
 ```
 oc adm manage-node NODE --schedulable=true
 ```
