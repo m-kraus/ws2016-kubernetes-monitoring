@@ -301,6 +301,5 @@ spec:
       - name: prometheus-volume-config
         configMap:
           name: prometheus-configmap
-        volumes:
       - emptyDir: {}
         name: prometheus-volume-empty
