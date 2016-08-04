@@ -1,0 +1,70 @@
+OpenshiftEnterprise
+oc v1.2.0
+kubernetes v1.2.0-36-g4a3f9c5
+===
+container_cpu_usage_seconds_total{
+cpu="cpu00",
+id="/system.slice/docker-765535e123f9070d5cc2d76527466d22e35b80d587bf3017010ca32f8ad8ba0f.scope",
+image="prom/node-exporter:0.12.0",
+instance="node1.novalocal",
+instance_address="172.16.204.163:10250",
+io_kubernetes_container_hash="1f11fa2f",
+io_kubernetes_container_name="node-exporter",
+io_kubernetes_container_restartCount="0",
+io_kubernetes_container_terminationMessagePath="/dev/termination-log",
+io_kubernetes_pod_name="node-exporter-4oala",
+io_kubernetes_pod_namespace="prometheus",
+io_kubernetes_pod_terminationGracePeriod="30",
+io_kubernetes_pod_uid="08171ee2-594f-11e6-941f-fa163e15753d",
+job="kubernetes-nodes",
+kubernetes_container_name="node-exporter",
+kubernetes_io_hostname="node1.novalocal",
+kubernetes_namespace="prometheus",
+kubernetes_pod_name="node-exporter-4oala",
+name="k8s_node-exporter.1f11fa2f_node-exporter-4oala_prometheus_08171ee2-594f-11e6-941f-fa163e15753d_a3cf68bb",
+region="default",
+zone="default"
+}
+
+Minishift
+---
+oc v1.2.0
+kubernetes v1.2.0-36-g4a3f9c5
+
+openshift v1.3.0-alpha.2
+kubernetes v1.3.0-alpha.1-331-g0522e63
+etcd 2.3.0
+===
+container_cpu_usage_seconds_total{
+cpu="cpu00",
+id="/docker/0deedeb7ba65b80e92279132429bf2294283cfdc03dd6c1b234273132f86a457",
+instance="boot2docker",
+instance_address="192.168.64.10:10250",
+job="kubernetes-nodes",
+kubernetes_io_hostname="boot2docker"
+}
+
+Minikube
+Client Version: version.Info{Major:"1", Minor:"3", GitVersion:"v1.3.0+2831379", GitCommit:"283137936a498aed572ee22af6774b6fb6e9fd94", GitTreeState:"not a git tree", BuildDate:"2016-07-05T15:40:13Z", GoVersion:"go1.6.2", Compiler:"gc", Platform:"darwin/amd64"}
+Server Version: version.Info{Major:"", Minor:"", GitVersion:"v1.3.0-alpha.1-331-g0522e63", GitCommit:"983578e", GitTreeState:"not a git tree", BuildDate:"1970-01-01T00:00:00Z", GoVersion:"go1.6", Compiler:"gc", Platform:"linux/amd64"}
+===
+container_cpu_usage_seconds_total{
+cpu="cpu00",
+id="/docker/9e8dac3482d3fe5915440352deaac44db1a3cf40f565093aa191f04b8ce9a402",
+image="prom/prometheus:v1.0.1",
+instance="kubernetes.default.svc:443",
+io_kubernetes_container_hash="29070026",
+io_kubernetes_container_name="prometheus-image",
+io_kubernetes_container_restartCount="1",
+io_kubernetes_container_terminationMessagePath="/dev/termination-log",
+io_kubernetes_pod_name="prometheus-deployment-3916788319-v9gow",
+io_kubernetes_pod_namespace="default",
+io_kubernetes_pod_terminationGracePeriod="30",
+io_kubernetes_pod_uid="7c349dab-5a05-11e6-a14b-b20e403bc847",
+job="kubernetes-apiservers",
+kubernetes_container_name="prometheus-image",
+kubernetes_namespace="default",
+kubernetes_pod_name="prometheus-deployment-3916788319-v9gow",
+name="k8s_prometheus-image.29070026_prometheus-deployment-3916788319-v9gow_default_7c349dab-5a05-11e6-a14b-b20e403bc847_53429cab",
+role="apiserver"
+}
