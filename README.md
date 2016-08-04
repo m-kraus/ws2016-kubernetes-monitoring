@@ -1,6 +1,6 @@
 # Prerequisites
 
-You have to have cluster-admin privileges on yout Openshift Cluster to execute some of the following commands.
+You have to have cluster-admin privileges on your Openshift Cluster to execute some of the following commands.
 
 Make sure, all your nodes are schedulable, as the node-exporter will not be created on a non-schedulable nodes.
 
@@ -40,7 +40,7 @@ oc adm policy add-cluster-role-to-user cluster-reader system:serviceaccount:prom
 
 Then create all necessary configuration items:
 ```
-oc create -f prometheus.yml
+oc create -f prometheus-openshift.yml
 ```
 
 ## Node metrics
