@@ -1,0 +1,17 @@
+  - job_name: 'osp_metrics'
+    metrics_path: '/metrics'
+    honor_labels: true
+    params:
+      'match[]':
+        - '{__name__=~"^job:"}'
+    static_configs:
+      - targets: ['192.168.64.14:30461']
+
+  - job_name: 'osp_federate'
+    metrics_path: '/federate'
+    honor_labels: true
+    params:
+      'match[]':
+        - '{job=~"^kubernetes.+"}'
+    static_configs:
+      - targets: ['192.168.64.14:30461']
