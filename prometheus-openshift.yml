@@ -273,7 +273,7 @@ spec:
         deploymentconfig: prometheus-dc
     spec:
       containers:
-      - image: prom/prometheus:v1.0.1
+      - image: prom/prometheus:v1.1.0
         name: prometheus-image
         args:
           - -config.file=/etc/prometheus/prometheus.yml
