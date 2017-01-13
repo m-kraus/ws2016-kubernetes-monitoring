@@ -59,3 +59,8 @@ Last create the DaemonSet for the node-exporter:
 ```
 oc create -f node-exporter.yml
 ```
+
+# Grafana Dashboard
+
+As the first dashboard we recommend: https://grafana.net/dashboards/162
+
